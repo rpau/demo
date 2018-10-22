@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class LibraryTest {
     @Test public void testSomeLibraryMethod() {
-        final Library classUnderTest = new Library();
-        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
+        final Library classUnderTest = new Library(null);
+        assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod(true));
     }
 }

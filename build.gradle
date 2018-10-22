@@ -1,0 +1,38 @@
+buildscript {
+  repositories {
+    mavenCentral()
+    jcenter()
+  }
+
+  dependencies {
+    classpath 'org.walkmod:gradle-walkmod-plugin:0.0.3'
+  }
+
+}
+
+apply plugin: 'java'
+
+//PMD configuration
+apply plugin: 'pmd'
+
+pmd {
+  reportsDir = file("$project.buildDir/reports/pmd")
+  ruleSets = ["src/main/resources/ruleset.xml"]
+  consoleOutput = true
+}
+
+//Walkmod configuration
+apply plugin: 'walkmod'
+                  
+walkmod {
+  chains = ['pmd']
+  properties = 'configurationFile=src/main/resources/ruleset.xml'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}

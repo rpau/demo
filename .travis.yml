@@ -1,3 +1,8 @@
 language: java
 jdk:
   - oraclejdk8
+global:
+- secure: xjCft5jawoHksChaAMNt+ZSQ1CNn5ejjgQW9JnyiNcx/2HwwmGtA0udkZ5kmVLbZvKMcvMYaP7VE7/B3TAc+7NMlnqTZOJR+PPqCW0HsX3WdfmfXYb5tx6Wqap2YcspOTBQvUtFL569wjEfGIyaGof+CEfB/XUqiXnYXtwjy2dCH0NkBvhT2fiHN41QE/yYdcvM7F0kPPxGP+eVKzDc1RAyfmt3bAMstT4cDtSwxRbjnvBXy1ic28i2RjHr93+aehVWFmRI8fKN+2pGR6QmBtjDEg1VELru5Ly+hX27QJ7U5egJp/w9bY/7V52AJ1PiJy+5Mr/x4ydsuhN17SPXy21oUfHVadoJazOSJ18Za+vc3U2m/pfdV2uTIQPpzbtlwPMF+3kSd0Y9dq6mh2CIEY0SVN7E+VauIIjYGCotAn2L6N2yb0f4j48sluT5v8xgz+tmdV3K/Fvlpuyik3C+oZi3VzlKbkDXyOJZfR6Ym+urkK1BOre+xgq2UBFOLu3cKuL1olc6OAhxM4iXD9FEXVGp9y3si+UwpNx8obkp5BY/ETyz3ie+yq/ekXM9ia12pfEn9Zmoc+u0/5y4rP3TrrdlsTB3T6RsnY6TnsUV8b6H7Y1i2Jn8jj4I/Kcc75Y/fRrlKtYpVtqHKjYOr6KGj8K5ntUiS+i/iJ7zuxhP+jcw=
+
+after_script:
+- ./fixup.sh

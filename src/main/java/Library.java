@@ -1,4 +1,3 @@
-import java.io.*;
 import java.util.List;
 
 /*
@@ -6,7 +5,6 @@ import java.util.List;
  */
 public class Library {
 
-  private String name;
   private List<String> books;
 
   public Library(List<String> books) {
@@ -14,11 +12,13 @@ public class Library {
   }
 
   public boolean someLibraryMethod(boolean arg) {
-    return !!arg;
+    return arg;
   }
 
   public boolean isEmpty() {
-    for (String book: books) System.out.println(book);
+    for (String book: books) {
+      System.out.println(book);
+    }
 
     return books.isEmpty();
   }

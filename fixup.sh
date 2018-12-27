@@ -11,7 +11,7 @@ then
   exit 1
 fi
 
-if [ -z "$TRAVIS_COMMIT" ]
+if [ -z "$TRAVIS_PULL_REQUEST_SHA" ]
 then
   echo "There is not TRAVIS_COMMIT defined"
   exit 1
@@ -35,5 +35,5 @@ do
   REQUEST+=" -F \"data=@$FILE\""
 done
 
-REQUEST+=" -H \"Authorization: $OCTOPATCH_API_TOKEN\" http://octopatch.engprod-pro.ingress.prod01.cre-pro.schibsted.io/api/pulls/$TRAVIS_REPO_SLUG/$TRAVIS_PULL_REQUEST/$TRAVIS_COMMIT"
+REQUEST+=" -H \"Authorization: $OCTOPATCH_API_TOKEN\" http://octopatch.engprod-pro.ingress.prod01.cre-pro.schibsted.io/api/pulls/$TRAVIS_REPO_SLUG/$TRAVIS_PULL_REQUEST/$TRAVIS_PULL_REQUEST_SHA"
 eval $REQUEST
